@@ -54,7 +54,7 @@ pages:
     # you push to the default branch of your repository (e.g. "master" or "main").
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
-image: "registry.gitlab.com/pages/hugo:latest"
+# image: "registry.gitlab.com/pages/hugo:latest"
 
 # pages:
 #   script:
