@@ -56,9 +56,9 @@ pages:
 
 image: "registry.gitlab.com/pages/hugo:latest"
 
-pages:
-  script:
-  - zola build
-  artifacts:
-    paths:
-    - public
+# pages:
+#   script:
+#   - zola build
+#   artifacts:
+#     paths:
+#     - public
