@@ -1,7 +1,5 @@
 # ids721-indiv1
 
-![pipeline status](https://gitlab.com/zx122/individual-project1/badges/main/pipeline.svg)
-
 [My Zola Web](https://individual-project1-zx122-5dccb406e897eb1cd4510fa85e616a28b228c.gitlab.io/)
 
 # Continuous Delivery of Personal Website
