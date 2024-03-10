@@ -1,93 +1,157 @@
-# Individual Project1
+# ids721-indiv1
+
+![pipeline status](https://gitlab.com/dukeaiml/IDS721/yx248-indiv1/badges/main/pipeline.svg)
+
+[My Zola Web](https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/)
+
+# Continuous Delivery of Personal Website
+
+This project focuses on the creation and continuous delivery of a personal website. The website is built using Zola, a fast and efficient static site generator written in Rust. The goal is to automate the build and deployment process, allowing updates to be pushed live automatically with each commit to the main branch of the project's GitLab repository.
+
+## Introduction
+
+A personal website serves as a digital portfolio showcasing your work, skills, and professional identity. By leveraging Zola and continuous delivery principles, we can ensure that the website is always up-to-date with the latest content and changes.
+
+### Why Zola?
+- **Speed:** Zola generates pages at an incredibly fast rate, enhancing the development workflow.
+- **Simplicity:** With Zola, you can manage your content without the overhead of databases or heavy frameworks.
+- **Flexibility:** Zola supports Markdown for content creation, making it easier to write and maintain website content.
 
 
+## Project Setup
 
-## Getting started
+## Installation of Zola on Ubuntu
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+1. Download Zola from the [official releases page](https://github.com/getzola/zola/releases). For example, use `zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz`.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+2. Unzip the package:
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+```bash
+tar -xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/zx122/individual-project1.git
-git branch -M main
-git push -uf origin main
+
+3. Move Zola to the bin directory:
+
+```bash
+sudo mv zola /usr/local/bin
 ```
 
-## Integrate with your tools
+For more information, refer to the [Zola Official Documentation]().
 
-- [ ] [Set up project integrations](https://gitlab.com/zx122/individual-project1/-/settings/integrations)
 
-## Collaborate with your team
+## Initial Setup and Running Zola Server
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- Initialize the project:
 
-## Test and Deploy
+    ```bash
+    zola init project_name
+    ```
 
-Use the built-in continuous integration in GitLab.
+    The structure should looks like:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+    ```bash
+    project root
+    ├── config.toml
+    ├── content
+    ├── sass
+    ├── static
+    ├── templates
+    └── themes
+    ```
 
-***
+- Build the project:
 
-# Editing this README
+    ```bash
+    zola build
+    ```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- Run the server (default port is 1111):
 
-## Suggestions for a good README
+   ```bash
+   zola serve
+   ```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
-Choose a self-explaining name for your project.
+## Theme Installation
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+1. Download your chosen theme to the `themes` directory.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+2. Update the `theme` variable in the configuration file to match the name of your theme's directory (e.g., `themes/kita`).
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+ **Note:** Ensure the `theme` variable is at the top level of the `.toml` hierarchy, not nested under sections like `[extra]` or `[markdown]`.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+3. Follow any additional configuration instructions provided in your theme's documentation.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## Theme Usage and Customization
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+- To use a theme, add the `extends` directive in your template HTML files. Modify the blocks to fit the theme's index.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- For further customization, you can either:
+- Copy the index code from the theme to your `index.html` file, or
+- Modify the theme files directly.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- Update the `config.toml` file in your project's root directory with the theme's `config.toml` settings. Customize these settings to suit your project's needs.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Website Structure
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+In the header of the page template, you'll find `Home` and `Projects` buttons that enable easy navigation between the Home page and the Projects List page, allowing quick access to any section of the website.
 
-## License
-For open source projects, say how it is licensed.
+### Home Page
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Overview of the IDS-721 course content.
+![Home Page](homepage.png)
+
+### Projects List Page
+
+- Portfolio of IDS-721 course projects.
+![Projects List Page](projectslistpage.png)
+
+### Project Detail Page
+
+- Detailed view of a selected project.
+- Direct links to the corresponding Git repository.
+- Back button to return to the project overview list.
+![Project Detail Page](projectpage.png)
+
+
+## Deployment to GitLab Pages
+
+To deploy your Zola site on GitLab Pages, follow these steps:
+
+1. **Create a `.gitlab-ci.yml` File:**
+   Create a `.gitlab-ci.yml` file in the root of your repository. This file is used by GitLab CI/CD to manage your project's jobs.
+
+2. **Configure the CI/CD Pipeline:**
+   Add the following script to your `.gitlab-ci.yml` file:
+
+   ```yaml
+   image: "registry.gitlab.com/pages/hugo:latest"
+
+   pages:
+     script:
+     - zola build
+     artifacts:
+       paths:
+       - public
+    ```
+
+   This script tells GitLab to use a docker image with Zola installed, build your site with Zola, and then store the output in the `public` directory.
+   Remember to chang the `value: ""` in `ZOLA_VERSION:` to `value: "0.18.0"`.
+
+3. **Push to GitLab:**
+   Commit and push this file to your GitLab repository.
+
+4. **Check Pipeline Status:**
+   After pushing, navigate to `CI/CD > Pipelines` in your GitLab repository to check the status of your pipeline. Once it's passed, your site is live.
+
+5. **Accessing Your Site:**
+   Your site will be available at `https://[username].gitlab.io/[repository-name]`, where `[username]` is your GitLab username, and `[repository-name]` is the name of your GitLab repository.
+
+6. **Custom Domain (Optional):**
+   If you wish to use a custom domain, refer to the [GitLab Pages Custom Domains documentation](https://docs.gitlab.com/ee/user/project/pages/custom_domains_ssl_tls_certification/index.html) for guidance.
+
+For more detailed instructions and configurations, visit the [Zola documentation on GitLab Pages deployment](https://www.getzola.org/documentation/deployment/gitlab-pages/).
+
+## Demo Video link
+- [Youtube Link](https://youtu.be/_m8Q7Sda6BI)

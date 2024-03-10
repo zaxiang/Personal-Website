@@ -1,0 +1,17 @@
+{% extends "index.html" %}<!---->
+
+{% block main %}
+
+<h4 class="go_back"><a href="{{ get_url(path='@/projects/_index.md') }}">Back</a></h4>
+<br>
+
+<h1 class="title">
+  {{ page.title }}
+</h1>
+<p class="subtitle"><strong>{{ page.date }}</strong></p>
+<a href="{{ page.description | safe }}">{{ page.title }} Git Repo Link</a>
+<br><br>
+
+{{ page.content | safe }}
+
+{% endblock main %}

@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <link rel="stylesheet" href="styles.css">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  <!-- Author -->
+  
+  <meta name="description" content="A personal blog" />
+  <meta name="author" content="" />
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+  <!-- Avatar -->
+  
+  <link rel="preload" as="image" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/icons/icon.jpg" />
+  
+
+  <!-- Social List -->
+  
+  <!---->
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/atom.xml"
+  />
+  
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io" />
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io"></a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+        <div
+        class="relative z-50 flex shrink-0 cursor-pointer items-center justify-center gap-2.5"
+        role="button"
+        >&nbsp;<a href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/">Yang Xu IDS-721</a></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        htmlClass[isDark ? "add" : "remove"]("dark");
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io//"
+            >Home</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io//projects"
+            >Projects</a
+          >
+        </li>
+        
+      </ul>
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-4 pb-16 pt-32 dark:prose-invert"
+    >
+      
+
+      <!-- Profile -->
+      <!---->
+      
+<div class="mb-16 flex items-start">
+  
+  <div
+    class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]"
+  >
+    <img
+      class=" my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin"
+      src="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/icons/icon.jpg"
+      alt="Zairan(Emily) Xiang Personal Website"
+    />
+  </div>
+  <!---->
+
+  
+  <div>
+    <h1 class="mb-2 text-3xl font-bold">Zairan(Emily) Xiang Personal Website</h1>
+    <div class="mb-2 break-words">
+      Master of Science student in Electrical & Computer Engineering at Duke University
+    </div>
+
+    
+  </div>
+  
+</div>
+
+<!---->
+      <!---->
+
+      <!-- Pages -->
+<!---->
+<!---->
+<!---->
+
+
+
+<!-- Main Nav -->
+
+<!---->
+      
+      
+        <!-- <h1 class="title">
+            Home Page
+        </h1> 
+        <p><a href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io/projects/">Project</a></p>
+        -->
+
+        <h1 id="about-myself">About Myself</h1>
+<!-- <p>I am Yang Xu, a software development engineer. I am actively pursuing new graduate or entry level career opportunities in the Software Development Engineering field. I worked as a web application development intern at Duke OIT, where I learned and improved skills in real-world development processes and full-stack development, mainly using the Ruby on Rails frame to develop the web application. I also have a strong interest in embedded systems and hardware field. I worked as a research assistant on a drone project. Therefore, I am not limited to front-end, back-end and full-stack development for software in Java, C/C++, Ruby, and so on, I am open to exploring various other positions such as embedded systems, hardware, and so on. I'm currently pursuing a master's degree in computer engineering at Duke University and expect to graduate next May.</p> -->
+<br>
+<br>
+<h1 id="this-web-is-for-my-ids-271-projects">This web is for my IDS-271 projects</h1>
+<h2 id="ids-271-course-description">IDS-271 Course Description</h2>
+<p>This course offers a comprehensive exploration of cloud computing, delving into Big Data, Machine Learning, and Large Language Models (LLMs). Interactive AWS labs provide a hands-on learning experience. The curriculum is project-based, ensuring practical application of concepts learned.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>Upon successful completion of this course, you will be able to:</p>
+<ul>
+<li>Summarize the fundamentals of cloud computing.</li>
+<li>Achieve AWS Solutions Architect Certification.</li>
+<li>Master the Rust language for general programming.</li>
+<li>Effectively utilize AI Pair Programming.</li>
+<li>Evaluate the economics of cloud computing.</li>
+<li>Address distributed computing challenges and opportunities.</li>
+<li>Foster non-linear, life-long learning skills.</li>
+<li>Craft compelling portfolios with GitLab, Hugging Face, YouTube, LinkedIn, and a personal website.</li>
+<li>Enhance Metacognition skills through teaching.</li>
+</ul>
+<h2 id="core-tech-stack">Core Tech Stack</h2>
+<p>Students will gain experience with an array of technologies, including:</p>
+<ul>
+<li>Rust programming language.</li>
+<li>AWS, including AWS Learner Labs and optional Free Tier account.</li>
+<li>Version control with GitLab.</li>
+<li>Collaboration via Slack.</li>
+<li>Computing resources like AWS Lightsail for GPU-intensive tasks.</li>
+<li>CodeWhisperer for AI-assisted coding.</li>
+</ul>
+<h2 id="communication">Communication</h2>
+<p>Effective communication is facilitated through:</p>
+<ul>
+<li>Slack for day-to-day communication.</li>
+<li>GitLab for code management and review.</li>
+</ul>
+<h2 id="media-and-labs">Media and Labs</h2>
+<p>Students will engage with:</p>
+<ul>
+<li>Duke AIML Group's resources on GitLab.</li>
+<li>A comprehensive series, &quot;52 Weeks of AWS&quot;.</li>
+<li>AWS Academy Labs and sandbox environments.</li>
+<li>Research computing on AWS Lightsail (subject to availability).</li>
+<li>Relevant Coursera courses.</li>
+</ul>
+<h2 id="reading-material">Reading Material</h2>
+<p>The course includes a curated selection of readings:</p>
+<ul>
+<li>&quot;Developing on AWS with C#&quot;</li>
+<li>&quot;Implementing MLOps in the Enterprise&quot;</li>
+<li>&quot;Practical MLOps&quot;</li>
+<li>&quot;Python for DevOps&quot;</li>
+<li>&quot;The Rust Programming Language&quot; (online book)</li>
+<li>&quot;Know Thyself: The Science of Self-Awareness&quot;</li>
+<li>A collection of AWS Whitepapers and Certification study materials.</li>
+</ul>
+
+        
+      
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    &copy;  2024
+    <a class="link" href="https://yx248-indiv1-dukeaiml-ids721-0dbfac262998dd8f7067eb4b9326dbe700.gitlab.io"
+      ></a
+    >
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank"
+      >Powered by Zola</a
+    >
+    <!-- <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Theme Kita</a> -->
+  </div>
+</footer>
+
+  </body>
+</html>
